@@ -14,3 +14,4 @@
     (package-install p)))
 
 (setq-default inhibit-startup-screen t)
+(tool-bar-mode -1)
