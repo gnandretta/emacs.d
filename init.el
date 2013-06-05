@@ -12,3 +12,5 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(setq-default inhibit-startup-screen t)
