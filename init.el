@@ -19,3 +19,6 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-themes")
 (load-theme 'noctilux t)
+
+(set-default-font "Menlo")
+(set-face-attribute 'default nil :height 140)
