@@ -16,3 +16,6 @@
 (setq-default inhibit-startup-screen t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/color-themes")
+(load-theme 'noctilux t)
