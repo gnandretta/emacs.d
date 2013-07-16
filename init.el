@@ -22,3 +22,7 @@
 
 (set-default-font "Menlo")
 (set-face-attribute 'default nil :height 140)
+
+(add-to-list 'load-path "~/.emacs.d")
+(require 'paredit)
+(add-hook 'clojure-mode-hook 'paredit-mode)
