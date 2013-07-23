@@ -21,6 +21,8 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/color-themes")
 (load-theme 'noctilux t)
 
