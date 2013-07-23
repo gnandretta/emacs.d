@@ -13,7 +13,11 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-(setq-default inhibit-startup-screen t)
+(setq-default
+  inhibit-startup-screen t
+  visible-bell t
+  ring-bell-function (lambda () (message "*beep*")))
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
