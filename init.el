@@ -37,3 +37,5 @@
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+
+(setq-default indent-tabs-mode nil)
