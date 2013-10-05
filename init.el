@@ -27,6 +27,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'jernau t)
 
