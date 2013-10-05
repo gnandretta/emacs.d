@@ -25,7 +25,7 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/color-themes")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'noctilux t)
 
 (set-default-font "Menlo")
