@@ -6,7 +6,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(clojure-mode clojure-test-mode nrepl)
+(defvar my-packages '(clojure-mode clojure-test-mode nrepl rainbow-delimiters)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -36,3 +36,4 @@
 (add-to-list 'load-path "~/.emacs.d")
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
