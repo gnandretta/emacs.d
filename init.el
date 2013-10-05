@@ -26,7 +26,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'noctilux t)
+(load-theme 'jernau t)
 
 (set-default-font "Menlo")
 (set-face-attribute 'default nil :height 140)
