@@ -4,7 +4,7 @@
 (let ((jernau-grey-1  "#999999")
       (jernau-grey    "#CCCCCC")
       (jernau-black+1 "#555555")
-      (jernau-black   "#222222")
+      (jernau-black   "#262626")
       (jernau-yellow  "#EEDDA9")
       (jernau-blue-1  "#90B5D3")
       (jernau-blue    "#ABCBFF")
@@ -22,8 +22,10 @@
    `(font-lock-function-name-face ((t (:foreground ,jernau-blue))))
    `(font-lock-keyword-face ((t (:foreground ,jernau-green))))
    `(font-lock-string-face ((t (:foreground ,jernau-yellow))))
-
+   `(font-lock-variable-name-face ((t (:foreground ,jernau-blue))))
    `(region ((t (:background ,jernau-black+1))))
+   `(fringe ((t (:foreground ,jernau-grey :background "#232323"))))
+
 
    `(mode-line ((t (:foreground ,jernau-black :background ,jernau-grey :box nil))))
    `(mode-line-inactive ((t (:foreground ,jernau-black :background ,jernau-grey-1 :box nil))))
@@ -44,7 +46,11 @@
    `(rainbow-delimiters-depth-4-face ((t (:foreground "#FDBC1B"))))
    `(rainbow-delimiters-depth-5-face ((t (:foreground "#F0F047"))))
    `(rainbow-delimiters-depth-6-face ((t (:foreground "#73EB47"))))
-   `(rainbow-delimiters-depth-7-face ((t (:foreground "#67F1E0")))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground "#67F1E0"))))
+
+   `(web-mode-html-tag-face ((t (:foreground ,jernau-green))))
+   `(web-mode-html-attr-name-face ((t (:foreground  ,jernau-grey))))
+   `(web-mode-html-attr-value-face ((t (:foreground ,jernau-yellow)))))
 
   (provide-theme 'jernau))
 
