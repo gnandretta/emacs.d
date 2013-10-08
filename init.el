@@ -6,7 +6,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(clojure-mode clojure-test-mode nrepl rainbow-delimiters)
+(defvar my-packages '(clojure-mode clojure-test-mode nrepl rainbow-delimiters web-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -43,3 +43,7 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 (setq-default indent-tabs-mode nil)
+
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
