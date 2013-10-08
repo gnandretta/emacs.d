@@ -47,3 +47,5 @@
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(setq ns-right-alternate-modifier 'none)
