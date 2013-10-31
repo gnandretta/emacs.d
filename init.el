@@ -24,6 +24,7 @@
 (show-paren-mode 1)
 (ido-mode 1)
 (ido-everywhere 1)
+(setq ido-enable-flex-matching 1)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
