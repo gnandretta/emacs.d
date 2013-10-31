@@ -42,6 +42,8 @@
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'js-mode-hook 'rainbow-delimiters-mode)
+(setq js-indent-level 2)
 
 (setq-default indent-tabs-mode nil)
 
