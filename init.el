@@ -31,10 +31,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'jernau t)
-
 (set-default-font "Menlo")
 (set-face-attribute 'default nil :height 140)
 
