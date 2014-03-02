@@ -6,7 +6,11 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(clojure-mode clojure-test-mode nrepl rainbow-delimiters web-mode)
+(defvar my-packages '(clojure-mode
+                      clojure-test-mode
+                      cider
+                      rainbow-delimiters
+                      web-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
