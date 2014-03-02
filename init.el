@@ -37,8 +37,9 @@
 (setq uniquify-buffer-name-style 'forward)
 
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/vendor")
 (require 'paredit)
+
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'js-mode-hook 'rainbow-delimiters-mode)
