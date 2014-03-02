@@ -22,6 +22,7 @@
   visible-bell t
   ring-bell-function (lambda () (message "*beep*")))
 
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (column-number-mode 1)
