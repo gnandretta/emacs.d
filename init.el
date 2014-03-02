@@ -42,7 +42,7 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'js-mode-hook 'rainbow-delimiters-mode)
 (setq js-indent-level 2)
-
+(setq css-indent-offset 2)
 (setq-default indent-tabs-mode nil)
 
 
