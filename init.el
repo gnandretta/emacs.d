@@ -36,6 +36,8 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'ibdknox t)
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (require 'paredit)
