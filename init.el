@@ -35,8 +35,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-(set-default-font "Menlo")
-(set-face-attribute 'default nil :height 140)
 
 (add-to-list 'load-path "~/.emacs.d")
 (require 'paredit)
