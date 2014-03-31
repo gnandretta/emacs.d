@@ -47,8 +47,8 @@
    `(ido-subdir ((t (:foreground ,ibdknox-grey+2))))
 
    ;; `(show-paren-match ((t (:inverse-video t :weight bold))))
-   `(show-paren-match ((t (:underline ,ibdknox-cyan))))
-   `(show-paren-mismatch ((t (:foreground ,ibdknox-red :underline ,ibdknox-red))))
+   `(show-paren-match ((t (:background nil :underline ,ibdknox-cyan))))
+   `(show-paren-mismatch ((t (:foreground ,ibdknox-red :background nil :underline ,ibdknox-red))))
 
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,ibdknox-grey+2))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,ibdknox-green))))
