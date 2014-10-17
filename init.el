@@ -7,8 +7,8 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(clojure-mode
-                      cider
+(defvar my-packages '(cider
+                      clojure-mode
                       rainbow-delimiters
                       web-mode)
   "A list of packages to ensure are installed at launch.")
