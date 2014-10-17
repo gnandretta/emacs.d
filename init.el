@@ -8,7 +8,6 @@
   (package-refresh-contents))
 
 (defvar my-packages '(clojure-mode
-                      clojure-test-mode
                       cider
                       rainbow-delimiters
                       web-mode)
