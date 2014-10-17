@@ -9,6 +9,7 @@
 
 (defvar my-packages '(cider
                       clojure-mode
+                      less-css-mode
                       rainbow-delimiters
                       web-mode)
   "A list of packages to ensure are installed at launch.")
