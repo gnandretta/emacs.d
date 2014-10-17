@@ -39,8 +39,8 @@
    `(region ((t (:background ,ibdknox-grey-2))))
    `(fringe ((t (:foreground ,ibdknox-grey+3 :background ,ibdknox-black))))
 
-   `(mode-line ((t (:foreground ,ibdknox-grey+3 :background ,ibdknox-grey-1 :box nil))))
-   `(mode-line-inactive ((t (:foreground ,ibdknox-grey+1 :background ,ibdknox-grey-3 :box nil))))
+   `(mode-line ((t (:foreground ,ibdknox-grey+3 :background ,ibdknox-grey-3 :box nil))))
+   `(mode-line-inactive ((t (:foreground ,ibdknox-grey+2 :background ,ibdknox-grey-3 :box nil))))
    `(minibuffer-prompt ((t (:foreground ,ibdknox-blue))))
    `(ido-first-match ((t (:foreground ,ibdknox-green+1 :weight bold))))
    `(ido-only-match ((t (:foreground ,ibdknox-violet :weight bold))))
