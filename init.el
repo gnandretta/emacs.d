@@ -9,6 +9,7 @@
 
 (defvar my-packages '(cider
                       clojure-mode
+                      exec-path-from-shell
                       less-css-mode
                       markdown-mode
                       rainbow-delimiters
@@ -18,6 +19,9 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 (setq-default
   inhibit-startup-screen t
