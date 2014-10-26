@@ -60,3 +60,8 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (setq ns-right-alternate-modifier 'none)
+
+(set-frame-font (font-spec :family "Source Code Pro"
+                           :size 14
+                           :antialias t
+                           :weight 'light))
