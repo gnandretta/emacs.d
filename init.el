@@ -64,4 +64,6 @@
 (set-frame-font (font-spec :family "Source Code Pro"
                            :size 14
                            :antialias t
-                           :weight 'light))
+                           :weight 'light)
+                nil
+                t)
