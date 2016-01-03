@@ -8,17 +8,17 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(exec-path-from-shell
-                      markdown-mode
-                      rainbow-delimiters
-                      web-mode)
-  "A list of packages to ensure are installed at launch.")
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(eval-when-compile
+  (require 'use-package))
 
-(when (memq window-system '(mac ns))
+(use-package exec-path-from-shell
+  :ensure
+  :if (memq window-system '(mac ns))
+  :config
   (exec-path-from-shell-initialize))
 
 (setq-default
@@ -37,21 +37,31 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+(use-package uniquify
+  :config
+  (setq uniquify-buffer-name-style 'forward))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-(add-hook 'js-mode-hook 'rainbow-delimiters-mode)
+(use-package rainbow-delimiters
+  :ensure
+  :config
+  (add-hook 'js-mode-hook 'rainbow-delimiters-mode))
+
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
 (setq-default indent-tabs-mode nil)
 
-
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(use-package web-mode
+  :ensure
+  :config
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
 
 (setq ns-right-alternate-modifier 'none)
 
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(use-package markdown-mode
+  :ensure
+  :config
+  (progn
+    (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+    (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))))
