@@ -8,7 +8,6 @@
   (package-refresh-contents))
 
 (defvar my-packages '(exec-path-from-shell
-                      less-css-mode
                       markdown-mode
                       rainbow-delimiters
                       web-mode)
