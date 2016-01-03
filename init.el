@@ -53,14 +53,10 @@
 
 (use-package web-mode
   :ensure
-  :config
-  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+  :mode "\\.html?\\'")
 
 (setq ns-right-alternate-modifier 'none)
 
 (use-package markdown-mode
   :ensure
-  :config
-  (progn
-    (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-    (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))))
+  :mode ("\\.md\\'" "\\.markdown\\'"))
