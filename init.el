@@ -41,7 +41,6 @@
 (setq uniquify-buffer-name-style 'forward)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'ibdknox t)
 
 (add-hook 'js-mode-hook 'rainbow-delimiters-mode)
 (setq js-indent-level 2)
