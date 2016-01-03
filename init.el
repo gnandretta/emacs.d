@@ -46,7 +46,7 @@
 (use-package rainbow-delimiters
   :ensure
   :config
-  (add-hook 'js-mode-hook 'rainbow-delimiters-mode))
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
