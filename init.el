@@ -15,29 +15,28 @@
 (eval-when-compile
   (require 'use-package))
 
-(use-package exec-path-from-shell
+(use-package exec-path-from-shell       ; use user's $PATH rather than system-wide's $PATH in OS X
   :ensure
   :if (memq window-system '(mac ns))
   :config
   (exec-path-from-shell-initialize))
 
-(setq-default
-  inhibit-startup-screen t
-  visible-bell t
-  ring-bell-function (lambda () (message "*beep*")))
+(setq inhibit-startup-screen t)         ; don't show "welcome to emacs" screen
+(setq ring-bell-function                ; disable annoying beep noise and show a message instead
+  (lambda () (message "*beep*")))
+(menu-bar-mode -1)                      ; don't show menu bar
+(tool-bar-mode -1)                      ; don't show tool bar
+(scroll-bar-mode -1)                    ; don't show scroll bars
+(column-number-mode 1)                  ; show column number in the mode line
+(show-paren-mode 1)                     ; highlight matching parenthesis
+(setq ido-enable-flex-matching t)       ; use flex matching in ido mode
+(ido-mode 1)                            ; enable ido mode
+(ido-everywhere 1)                      ; ???
 
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(column-number-mode 1)
-(show-paren-mode 1)
-(ido-mode 1)
-(ido-everywhere 1)
-(setq ido-enable-flex-matching 1)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(use-package uniquify
+(use-package uniquify                   ; include path for buffers with the same name
   :config
   (setq uniquify-buffer-name-style 'forward))
 
