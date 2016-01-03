@@ -53,12 +53,5 @@
 
 (setq ns-right-alternate-modifier 'none)
 
-(set-frame-font (font-spec :family "Source Code Pro"
-                           :size 14
-                           :antialias t
-                           :weight 'light)
-                nil
-                t)
-
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
