@@ -1,4 +1,5 @@
 (require 'package)
+(setq package-enable-at-startup nil)    ; avoid loading packages again after processing this file (we are calling package-initialize already)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 
