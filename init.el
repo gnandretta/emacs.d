@@ -7,9 +7,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(cider
-                      clojure-mode
-                      exec-path-from-shell
+(defvar my-packages '(exec-path-from-shell
                       less-css-mode
                       markdown-mode
                       rainbow-delimiters
@@ -45,12 +43,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'ibdknox t)
 
-(add-to-list 'load-path "~/.emacs.d/vendor")
-(require 'paredit)
-
-(add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'js-mode-hook 'rainbow-delimiters-mode)
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
