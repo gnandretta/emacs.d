@@ -53,7 +53,7 @@
 
 (use-package web-mode
   :ensure
-  :mode "\\.html?\\'")
+  :mode ("\\.html?\\'" "\\.jsx\\'"))
 
 (setq ns-right-alternate-modifier 'none)
 
