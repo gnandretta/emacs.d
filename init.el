@@ -42,7 +42,8 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (when (display-graphic-p)
-  (load-theme 'ion t))
+  (load-theme 'ion t)
+  (set-frame-font "Menlo 15"))
 
 (use-package rainbow-delimiters
   :ensure
