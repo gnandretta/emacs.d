@@ -80,3 +80,10 @@
     (diff-hl-flydiff-mode))
   :config
   (setq diff-hl-side 'right))
+
+(use-package tern ;; requires npm install --global tern
+  :commands tern-mode
+  :config
+  (progn
+    (add-hook 'js-mode-hook (lambda () (message "!") (tern-mode t)))
+    (add-hook 'web-mode-hook (lambda () (tern-mode t)))))
