@@ -68,6 +68,8 @@
   :ensure
   :mode ("\\.md\\'" "\\.markdown\\'"))
 
+(use-package haskell-mode :ensure)
+
 (use-package magit
   :ensure
   :bind ("C-x g" . magit-status))
