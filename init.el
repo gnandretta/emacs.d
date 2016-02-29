@@ -71,3 +71,12 @@
 (use-package magit
   :ensure
   :bind ("C-x g" . magit-status))
+
+(use-package diff-hl
+  :ensure
+  :init
+  (progn
+    (global-diff-hl-mode t)
+    (diff-hl-flydiff-mode))
+  :config
+  (setq diff-hl-side 'right))
