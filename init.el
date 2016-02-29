@@ -67,3 +67,7 @@
 (use-package markdown-mode
   :ensure
   :mode ("\\.md\\'" "\\.markdown\\'"))
+
+(use-package magit
+  :ensure
+  :bind ("C-x g" . magit-status))
