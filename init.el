@@ -41,7 +41,8 @@
   (setq uniquify-buffer-name-style 'forward))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'ion t)
+(when (display-graphic-p)
+  (load-theme 'ion t))
 
 (use-package rainbow-delimiters
   :ensure
