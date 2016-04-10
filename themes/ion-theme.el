@@ -2,22 +2,25 @@
 
 (let ((bg "#473d41")
       (bg-highlight "#5a4e52")
+      (bg-darken "#3d3538")
       (fg "#c5c8c6")
       (blueish-green "#8abeb7")
       (violet "#b294bb")
       (blue "#81a2be")
       (orange "#de935f")
       (red "#cc6666")
+      (green "#b5bd68")
       (grey "#969896")
       (yellow "#f0c674"))
 
   ;; black #373b41
-  ;; green #b5bd68
 
 
   (custom-theme-set-faces
    'ion
    `(default ((t (:foreground ,fg :background ,bg))))
+   `(link ((t (:foreground ,blueish-green :underline ,blueish-green))))
+   `(highlight ((t (:background ,blueish-green, :foreground ,bg))))
 
    `(font-lock-preprocessor-face ((t (:foreground "#ff0000"))))
    `(font-lock-type-face ((t (:foreground ,fg))))
@@ -34,13 +37,20 @@
    `(cursor ((t (:background ,fg))))
    `(region ((t (:background ,bg-highlight))))
    `(fringe ((t (:foreground ,fg :background ,bg))))
+
+   `(isearch ((t (:background "#FFDC72" :foreground ,bg))))
+   `(lazy-highlight ((t (:background "#B0F0F0" :foreground ,bg))))
+   `(isearch-fail ((t (:background ,red))))
+
    `(mode-line ((t (:foreground ,bg :background ,fg :box nil))))
    `(mode-line-inactive ((t (:foreground "#716a6c" :background ,fg :box nil))))
+   `(mode-line-highlight ((t (:background "#f8edc9" :box nil))))
 
    `(minibuffer-prompt ((t (:foreground ,blue))))
    `(ido-first-match ((t (:foreground ,blueish-green :weight bold))))
    `(ido-only-match ((t (:foreground ,blueish-green :weight bold))))
    `(ido-subdir ((t (:foreground ,blue))))
+   `(ido-indicator ((t (:foreground ,yellow :background nil))))
 
    `(show-paren-match ((t (:background nil :underline ,blueish-green))))
    `(show-paren-mismatch ((t (:foreground ,red :background nil :underline ,red))))
@@ -56,9 +66,47 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,fg))))
    `(rainbow-delimiters-unmatched-face ((t (:foreground ,red :background nil))))
 
+   `(org-level-1 ((t (:foreground ,blueish-green))))
+   `(org-level-2 ((t (:foreground ,blue))))
+   `(org-level-3 ((t (:foreground ,violet))))
+   `(org-level-4 ((t (:foreground ,yellow))))
+   `(org-level-5 ((t (:foreground ,green))))
+   `(org-level-6 ((t (:foreground ,orange))))
+   `(org-level-7 ((t (:foreground ,grey))))
+   `(org-level-8 ((t (:foreground ,fg))))
+   `(org-checkbox-statistics-todo ((t (:foreground ,yellow))))
+   `(org-todo ((t (:foreground ,red))))
+   `(org-done ((t (:foreground ,green))))
+   `(org-date ((t (:foreground ,blueish-green :underline ,blueish-green))))
+
    `(diff-hl-insert ((t (:foreground ,blueish-green :background ,blueish-green))))
    `(diff-hl-change ((t (:foreground ,yellow :background ,yellow))))
    `(diff-hl-delete ((t (:foreground ,red :background ,red))))
+
+   `(diff-file-header ((t (:foreground ,fg :background "#786f72"))))
+   `(diff-header ((t (:foreground ,fg :background "#786f72"))))
+   `(diff-hunk-header ((t (:foreground ,blue))))
+   `(diff-function ((t (:foreground ,blue))))
+   `(diff-removed ((t (:foreground ,red))))
+   `(diff-refine-removed ((t (:foreground ,red :background nil :underline ,red))))
+   `(diff-added ((t (:foreground ,blueish-green))))
+   `(diff-refine-added ((t (:foreground ,blueish-green :background nil :underline ,blueish-green))))
+
+   `(magit-branch-local ((t (:foreground ,blue))))
+   `(magit-branch-remote ((t (:foreground ,violet))))
+   `(magit-hash ((t (:foreground ,blueish-green))))
+
+   `(magit-diff-file-heading ((t (:bold nil))))
+   `(magit-section-heading ((t (:foreground ,yellow))))
+   `(magit-section-highlight ((t (:foreground ,violet :background nil))))
+   `(magit-diff-context-highlight ((t (:background nil))))
+
+   `(magit-diff-hunk-heading ((t (:foreground ,blue))))
+   `(magit-diff-hunk-heading-highlight ((t (:foreground ,violet))))
+   `(magit-diff-removed ((t (:foreground ,red))))
+   `(magit-diff-removed-highlight ((t (:foreground ,red))))
+   `(magit-diff-added ((t (:foreground ,blueish-green))))
+   `(magit-diff-added-highlight ((t (:foreground ,blueish-green))))
 
    `(web-mode-html-tag-bracket-face ((t (:foreground ,grey))))
    `(web-mode-html-tag-face ((t (:foreground ,fg))))
