@@ -72,6 +72,7 @@
   :mode ("\\.md\\'" "\\.markdown\\'"))
 
 (use-package haskell-mode :ensure)
+(use-package stylus-mode :ensure)
 
 (use-package magit
   :ensure
