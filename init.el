@@ -93,3 +93,12 @@
   (progn
     (add-hook 'js-mode-hook (lambda () (message "!") (tern-mode t)))
     (add-hook 'web-mode-hook (lambda () (tern-mode t)))))
+
+(use-package avy
+  :ensure
+  :bind
+  ("C-;" . avy-goto-char)
+  ("C-'" . avy-goto-char-2)
+  ("M-g f" . avy-goto-line)
+  ("M-g w" . avy-goto-word-1)
+  ("M-g e" . avy-goto-word-0))
