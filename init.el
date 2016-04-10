@@ -32,6 +32,7 @@
 (setq ido-enable-flex-matching t)       ; use flex matching in ido mode
 (ido-mode 1)                            ; enable ido mode
 (ido-everywhere 1)                      ; ???
+(setq indicate-empty-lines t)           ; distinguish lines after the buffer end
 
 
 (defalias 'yes-or-no-p 'y-or-n-p)
