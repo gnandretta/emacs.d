@@ -102,3 +102,12 @@
   ("M-g f" . avy-goto-line)
   ("M-g w" . avy-goto-word-1)
   ("M-g e" . avy-goto-word-0))
+
+(use-package deft ;; ln -s <dropbox-notes-dir> ~/.deft
+  :ensure
+  :init
+  (progn
+    (setq deft-extensions '("org" "md"))
+    (setq deft-recursive t)
+    (setq deft-use-filename-as-title t)
+    (setq deft-use-filter-string-for-filename t)))
