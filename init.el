@@ -71,6 +71,7 @@
   :ensure
   :mode ("\\.md\\'" "\\.markdown\\'"))
 
+(use-package elm-mode :ensure)
 (use-package haskell-mode :ensure)
 (use-package stylus-mode :ensure)
 
