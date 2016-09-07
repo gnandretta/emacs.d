@@ -73,6 +73,7 @@
 
 (use-package elm-mode :ensure)
 (use-package haskell-mode :ensure)
+(use-package swift-mode :ensure)
 (use-package stylus-mode :ensure)
 
 (use-package magit
