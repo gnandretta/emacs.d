@@ -46,10 +46,10 @@
   (load-theme 'ire-works t)
   (set-frame-font "Menlo 15"))
 
-;; (use-package rainbow-delimiters
-;;   :ensure
-;;   :config
-;;   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+(use-package rainbow-delimiters
+  :ensure
+  :config
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
