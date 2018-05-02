@@ -71,11 +71,6 @@
   :ensure
   :mode ("\\.md\\'" "\\.markdown\\'"))
 
-(use-package elm-mode :ensure)
-(use-package haskell-mode :ensure)
-(use-package swift-mode :ensure)
-(use-package stylus-mode :ensure)
-
 (use-package magit
   :ensure
   :bind ("C-x g" . magit-status))
@@ -88,28 +83,3 @@
     (diff-hl-flydiff-mode))
   :config
   (setq diff-hl-side 'right))
-
-(use-package tern ;; requires npm install --global tern
-  :commands tern-mode
-  :config
-  (progn
-    (add-hook 'js-mode-hook (lambda () (message "!") (tern-mode t)))
-    (add-hook 'web-mode-hook (lambda () (tern-mode t)))))
-
-(use-package avy
-  :ensure
-  :bind
-  ("C-;" . avy-goto-char)
-  ("C-'" . avy-goto-char-2)
-  ("M-g f" . avy-goto-line)
-  ("M-g w" . avy-goto-word-1)
-  ("M-g e" . avy-goto-word-0))
-
-(use-package deft ;; ln -s <dropbox-notes-dir> ~/.deft
-  :ensure
-  :init
-  (progn
-    (setq deft-extensions '("org" "md"))
-    (setq deft-recursive t)
-    (setq deft-use-filename-as-title t)
-    (setq deft-use-filter-string-for-filename t)))
