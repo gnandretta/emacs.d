@@ -46,6 +46,25 @@
   (load-theme 'ire-works t)
   (set-frame-font "Menlo 15"))
 
+(use-package ivy
+  :demand                               ; loaded by counsel
+  :config
+  (progn
+    (setq ivy-use-virtual-buffers t     ; add recentf-mode and bookmarks to ivy-switch-buffer
+          ivy-count-format "%d/%d ")    ; display candidates filtered / total count
+    (ivy-mode t)))                      ; use ivy in any command using completing-read-function
+
+(use-package swiper
+  :demand                               ; loaded by counsel
+  :bind (("C-s" . swiper)))
+
+(use-package counsel
+  :bind
+  (("C-c a" . counsel-ag)
+   ("C-c g" . counsel-git))
+  :config
+  (counsel-mode t))                     ; remap built-in functions with counsel replacements
+
 (use-package rainbow-delimiters
   :ensure
   :config
