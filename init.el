@@ -104,3 +104,10 @@
         diff-hl-draw-borders nil)       ; solid highlight
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)) ; refresh highlight after commit in magit
 
+;; git config --global github.user <github-user-name>
+;; git config --global github.oauth-token <access-token-with-gist-scope>
+;; token can be generated from https://github.com/settings/tokens
+(use-package gist
+  :ensure
+  :config
+  (setq gist-ask-for-description t))    ; ask for gist when creating gist
