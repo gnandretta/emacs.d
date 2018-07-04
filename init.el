@@ -97,8 +97,10 @@
 (use-package diff-hl
   :ensure
   :init
-  (progn
-    (global-diff-hl-mode t)
-    (diff-hl-flydiff-mode))
+  (global-diff-hl-mode t)               ; enable highlight in all buffers
+  (diff-hl-flydiff-mode t)              ; highlight changes on the fly
   :config
-  (setq diff-hl-side 'right))
+  (setq diff-hl-side 'right             ; show highlight in the right fringe
+        diff-hl-draw-borders nil)       ; solid highlight
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)) ; refresh highlight after commit in magit
+
