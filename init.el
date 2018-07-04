@@ -111,3 +111,5 @@
   :ensure
   :config
   (setq gist-ask-for-description t))    ; ask for gist when creating gist
+
+(load (expand-file-name "user.el" user-emacs-directory) 'noerror) ; load file ignored by git
