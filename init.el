@@ -59,10 +59,8 @@
 (use-package ivy
   :demand                               ; loaded by counsel
   :config
-  (progn
-    (setq ivy-use-virtual-buffers t     ; add recentf-mode and bookmarks to ivy-switch-buffer
-          ivy-count-format "%d/%d ")    ; display candidates filtered / total count
-    (ivy-mode t)))                      ; use ivy in any command using completing-read-function
+  (setq ivy-use-virtual-buffers t       ; add recentf-mode and bookmarks to ivy-switch-buffer
+        ivy-count-format "%d/%d "))     ; display candidates filtered / total count
 
 (use-package swiper
   :demand                               ; loaded by counsel
