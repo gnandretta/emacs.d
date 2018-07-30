@@ -37,6 +37,16 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(use-package add-node-modules-path      ; flycheck needs this to pick up eslint
+  :ensure
+  :config
+  (add-hook 'js-mode-hook #'add-node-modules-path))
+
+(use-package flycheck
+  :ensure
+  :config
+  (add-hook 'js-mode-hook #'flycheck-mode))
+
 (use-package uniquify                   ; include path for buffers with the same name
   :config
   (setq uniquify-buffer-name-style 'forward))
