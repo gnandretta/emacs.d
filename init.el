@@ -68,10 +68,8 @@
 
 (use-package counsel
   :bind
-  (("C-c a" . counsel-ag)
-   ("C-c g" . counsel-git))
-  :config
-  (counsel-mode t))                     ; remap built-in functions with counsel replacements
+  (("C-; a" . counsel-ag)
+   ("C-; p" . counsel-git)))
 
 (use-package rainbow-delimiters
   :ensure
