@@ -90,6 +90,8 @@
     (setq web-mode-css-indent-offset 2)
     (setq web-mode-code-indent-offset 2)))
 
+(use-package prettier-js :ensure)
+
 (setq ns-right-alternate-modifier 'none)
 
 (use-package markdown-mode
