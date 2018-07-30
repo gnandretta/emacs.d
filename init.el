@@ -37,6 +37,11 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(use-package ace-window
+  :ensure
+  :bind ("C-; o" . ace-window)
+  :config (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
+
 (use-package add-node-modules-path      ; flycheck needs this to pick up eslint
   :ensure
   :config
