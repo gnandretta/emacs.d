@@ -57,9 +57,6 @@
   (setq uniquify-buffer-name-style 'forward))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(when (display-graphic-p)
-  (load-theme 'ire-works t)
-  (set-frame-font "Menlo 15"))
 
 (use-package ivy
   :demand                               ; loaded by counsel
