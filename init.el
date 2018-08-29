@@ -94,6 +94,19 @@
 
 (use-package prettier-js :ensure)
 
+(use-package clojure-mode :ensure)
+
+(use-package inf-clojure
+  :ensure
+  :config
+  (add-hook 'clojure-mode-hook #'inf-clojure-minor-mode))
+
+(use-package paredit
+  :ensure
+  :config
+  (add-hook 'clojure-mode-hook #'paredit-mode)
+  (add-hook 'emacs-lisp-mode-hook #'paredit-mode))
+
 (setq ns-right-alternate-modifier 'none)
 
 (use-package markdown-mode
