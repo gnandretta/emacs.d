@@ -115,7 +115,7 @@
 
 (use-package magit
   :ensure
-  :bind ("C-x g" . magit-status))
+  :bind ("C-; g" . magit-status))
 
 (use-package diff-hl
   :ensure
