@@ -66,7 +66,8 @@
 
 (use-package swiper
   :demand                               ; loaded by counsel
-  :bind (("C-s" . swiper)))
+  :bind (("C-; s" . swiper)))
+
 
 (use-package counsel
   :bind
