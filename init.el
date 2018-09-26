@@ -97,10 +97,11 @@
 
 (use-package clojure-mode :ensure)
 
-(use-package inf-clojure
-  :ensure
-  :config
-  (add-hook 'clojure-mode-hook #'inf-clojure-minor-mode))
+(use-package inf-clojure :ensure)
+
+(defun lumo-repl()
+  (interactive)
+  (inf-clojure "lumo -d"))
 
 (use-package paredit
   :ensure
