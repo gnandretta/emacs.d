@@ -119,8 +119,6 @@
   (add-hook 'clojure-mode-hook #'paredit-mode)
   (add-hook 'emacs-lisp-mode-hook #'paredit-mode))
 
-(setq ns-right-alternate-modifier 'none)
-
 (use-package markdown-mode
   :ensure
   :mode ("\\.md\\'" "\\.markdown\\'"))
@@ -148,3 +146,15 @@
   (setq gist-ask-for-description t))    ; ask for gist when creating gist
 
 (load (expand-file-name "user.el" user-emacs-directory) 'noerror) ; load file ignored by git
+
+(when (memq window-system '(mac ns))    ; render emoji and nicer title bar
+  (setq-default ns-right-alternate-modifier 'none)  ; right option is not meta
+  (set-fontset-font t                   ; render emoji
+                    'symbol
+                    (font-spec :family "Apple Color Emoji")
+                    nil
+                    'prepend)
+  (add-to-list 'default-frame-alist     ; paint title bar with background
+               '(ns-transparent-titlebar . t))
+  (add-to-list 'default-frame-alist     ; white title bar text
+               '(ns-appearance . dark)))
