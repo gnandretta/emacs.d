@@ -21,21 +21,31 @@
   :config
   (exec-path-from-shell-initialize))
 
-(setq inhibit-startup-screen t)         ; don't show "welcome to emacs" screen
-(setq ring-bell-function                ; disable annoying beep noise and show a message instead
-  (lambda () (message "*beep*")))
 (menu-bar-mode -1)                      ; don't show menu bar
 (tool-bar-mode -1)                      ; don't show tool bar
 (scroll-bar-mode -1)                    ; don't show scroll bars
 (column-number-mode 1)                  ; show column number in the mode line
+(toggle-indicate-empty-lines)           ; distinguish lines after the buffer en
 (show-paren-mode 1)                     ; highlight matching parenthesis
-(setq ido-enable-flex-matching t)       ; use flex matching in ido mode
+(save-place-mode 1)                     ; move point to where it was last time
+(global-auto-revert-mode t)             ; revert buffers automatically when underlying files are changed externally
 (ido-mode 1)                            ; enable ido mode
 (ido-everywhere 1)                      ; ???
-(toggle-indicate-empty-lines)           ; distinguish lines after the buffer end
+(setq inhibit-startup-screen t          ; don't show "welcome to emacs" screen
+      ring-bell-function (lambda () (message "*beep*")) ; disable annoying beep noise and show a message instead
+      backup-directory-alist `(("." . ,(concat user-emacs-directory ; don't place backups files all over
+                                               "backups")))
+      require-final-newline t           ; add newline when saving file
+      load-prefer-newer t               ; load most recent when several versions of the same file exist
+      apropos-do-all t                  ; search more extensively but maybe slower
+      save-interprogram-paste-before-kill t ; put clipboard into kill ring before replacing it
+      ido-enable-flex-matching t)       ; use flex matching in ido mode
 
+(add-hook 'before-save-hook             ; clean whitespace when saving
+          'delete-trailing-whitespace)
 
-(defalias 'yes-or-no-p 'y-or-n-p)
+(defalias 'yes-or-no-p 'y-or-n-p)       ; no need to type yes or no
+
 
 (use-package ace-window
   :ensure
