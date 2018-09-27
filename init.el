@@ -46,7 +46,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)       ; no need to type yes or no
 
-
 (use-package ace-window
   :ensure
   :bind ("C-x o" . ace-window)
@@ -78,7 +77,6 @@
   :demand                               ; loaded by counsel
   :bind (("C-; s" . swiper)))
 
-
 (use-package counsel
   :bind
   (("C-; a" . counsel-ag)
@@ -99,11 +97,10 @@
   :ensure
   :mode ("\\.html?\\'" "\\.jsx\\'")
   :config
-  (progn
-    (setq web-mode-markup-indent-offset 2)
-    (setq web-mode-attr-indent-offset 2)
-    (setq web-mode-css-indent-offset 2)
-    (setq web-mode-code-indent-offset 2)))
+  (setq web-mode-markup-indent-offset 2
+        web-mode-attr-indent-offset 2
+        web-mode-css-indent-offset 2
+        web-mode-code-indent-offset 2))
 
 (use-package prettier-js :ensure)
 
