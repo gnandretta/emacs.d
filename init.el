@@ -145,6 +145,11 @@
   :config
   (setq gist-ask-for-description t))    ; ask for gist when creating gist
 
+(use-package browse-at-remote
+  :ensure
+  :config
+  (setq browse-at-remote-prefer-symbolic nil))
+
 (load (expand-file-name "user.el" user-emacs-directory) 'noerror) ; load file ignored by git
 
 (when (memq window-system '(mac ns))    ; render emoji and nicer title bar
