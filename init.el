@@ -89,6 +89,8 @@
   :config
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
+(setq org-hide-leading-stars t)
+
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
 (setq-default indent-tabs-mode nil)
