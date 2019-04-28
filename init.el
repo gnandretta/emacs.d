@@ -39,7 +39,10 @@
       load-prefer-newer t               ; load most recent when several versions of the same file exist
       apropos-do-all t                  ; search more extensively but maybe slower
       save-interprogram-paste-before-kill t ; put clipboard into kill ring before replacing it
-      ido-enable-flex-matching t)       ; use flex matching in ido mode
+      ido-enable-flex-matching t        ; use flex matching in ido mode
+      frame-resize-pixelwise t          ; wihtout this frame size is *proportional* to char size
+      default-frame-alist '((internal-border-width . 0)) ; no black border — not sure if the next line is needed
+      initial-frame-alist '((internal-border-width . 0)))
 
 (add-hook 'before-save-hook             ; clean whitespace when saving
           'delete-trailing-whitespace)
