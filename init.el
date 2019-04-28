@@ -76,6 +76,25 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+(use-package hydra :ensure)
+
+(use-package dumb-jump
+  :ensure)
+
+(defhydra dumb-jump-hydra (:color blue :columns 3)
+  "Dumb Jump"
+  ("j" dumb-jump-go "Go")
+  ("o" dumb-jump-go-other-window "Other window")
+  ("e" dumb-jump-go-prefer-external "Go external")
+  ("x" dumb-jump-go-prefer-external-other-window "Go external other window")
+  ("i" dumb-jump-go-prompt "Prompt")
+  ("l" dumb-jump-quick-look "Quick look")
+  ("b" dumb-jump-back "Back"))
+
+(global-set-key (kbd "C-; j") 'dumb-jump-hydra/body)
+(setq dumb-jump-force-searcher 'ag)
+(setq dumb-jump-selector 'ivy)
+
 (use-package ivy
   :demand                               ; loaded by counsel
   :config
