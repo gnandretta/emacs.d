@@ -149,6 +149,8 @@
 
 (use-package prettier-js :ensure)
 
+(setq python-indent-offset 2)
+
 (use-package clojure-mode :ensure)
 
 (use-package inf-clojure :ensure)
