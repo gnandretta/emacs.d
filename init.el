@@ -134,6 +134,10 @@
 
 (use-package company :ensure)
 
+(add-hook 'prog-mode-hook
+          '(lambda ()
+             (setq truncate-lines t)))
+
 (use-package rjsx-mode
   :ensure
   :mode ("\\.jsx?\\'"))
