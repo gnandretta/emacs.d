@@ -95,6 +95,12 @@
 (setq dumb-jump-force-searcher 'ag)
 (setq dumb-jump-selector 'ivy)
 
+(use-package counsel
+  :ensure
+  :bind
+  (("C-; a" . counsel-ag)
+   ("C-; p" . counsel-git)))
+
 (use-package ivy
   :demand                               ; loaded by counsel
   :config
@@ -104,11 +110,6 @@
 (use-package swiper
   :demand                               ; loaded by counsel
   :bind (("C-; s" . swiper)))
-
-(use-package counsel
-  :bind
-  (("C-; a" . counsel-ag)
-   ("C-; p" . counsel-git)))
 
 (use-package rainbow-delimiters
   :ensure
