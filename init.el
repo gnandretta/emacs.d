@@ -132,6 +132,8 @@
   :bind
   (("C-; C-i" . imenu-list-smart-toggle)))
 
+(use-package company :ensure)
+
 (use-package web-mode
   :ensure
   :mode ("\\.html?\\'" "\\.jsx\\'")
