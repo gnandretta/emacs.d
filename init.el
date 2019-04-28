@@ -99,6 +99,7 @@
   :ensure
   :bind
   (("C-; a" . counsel-ag)
+   ("C-; i" . counsel-imenu)
    ("C-; p" . counsel-git)))
 
 (use-package ivy
@@ -121,6 +122,15 @@
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
 (setq-default indent-tabs-mode nil)
+
+(use-package imenu-list
+  :ensure
+  :config
+  (setq imenu-list-auto-resize t
+        imenu-list-focus-after-activation t
+        imenu-list-mode-line-format nil)
+  :bind
+  (("C-; C-i" . imenu-list-smart-toggle)))
 
 (use-package web-mode
   :ensure
