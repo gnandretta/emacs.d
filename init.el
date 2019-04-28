@@ -134,6 +134,10 @@
 
 (use-package company :ensure)
 
+(use-package rjsx-mode
+  :ensure
+  :mode ("\\.jsx?\\'"))
+
 (use-package web-mode
   :ensure
   :mode ("\\.html?\\'" "\\.jsx\\'")
