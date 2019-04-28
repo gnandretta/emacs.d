@@ -49,6 +49,12 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)       ; no need to type yes or no
 
+(use-package ns-auto-titlebar
+  :ensure
+  :if (eq system-type 'darwin)
+  :config
+  (ns-auto-titlebar-mode))
+
 (use-package ace-window
   :ensure
   :bind ("C-x o" . ace-window)
