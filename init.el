@@ -21,6 +21,9 @@
   :config
   (exec-path-from-shell-initialize))
 
+(setq init-dir (file-name-directory (or load-file-name (buffer-file-name))))
+(org-babel-load-file (expand-file-name "config.org" init-dir))
+
 (menu-bar-mode -1)                      ; don't show menu bar
 (tool-bar-mode -1)                      ; don't show tool bar
 (scroll-bar-mode -1)                    ; don't show scroll bars
@@ -116,8 +119,6 @@
   :ensure
   :config
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
-
-(setq org-hide-leading-stars t)
 
 (setq js-indent-level 2)
 (setq css-indent-offset 2)
