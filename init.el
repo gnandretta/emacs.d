@@ -171,6 +171,8 @@
   (add-hook 'clojure-mode-hook #'paredit-mode)
   (add-hook 'emacs-lisp-mode-hook #'paredit-mode))
 
+(use-package lua-mode :ensure)
+
 (use-package markdown-mode
   :ensure
   :mode ("\\.md\\'" "\\.markdown\\'"))
