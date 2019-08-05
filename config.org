@@ -1,5 +1,16 @@
 * Org
 ** Settings
 #+BEGIN_SRC emacs-lisp
-(setq org-startup-indented t)
+  (setq org-startup-indented t)
+  (setq org-refile-targets '((nil :maxlevel . 9)))
+  (setq org-refile-use-outline-path nil)
+  (setq org-outline-path-complete-in-steps nil)
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")
+                            (sequence "SUSPENSE(s)" "|" "CLEARED(l)" "FINISHED(f)")))
+  (defun g-org-refile-agenda-files (args)
+    (interactive "p")
+    (let* ((org-refile-use-outline-path 'file)
+           (org-refile-targets '((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
+      (org-refile)))
 #+END_SRC
