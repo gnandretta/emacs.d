@@ -101,7 +101,8 @@
 (use-package counsel
   :ensure
   :bind
-  (("C-; a" . counsel-ag)
+  (("C-; C-a" . counsel-ag)
+   ("C-; C-s" . counsel-rg)
    ("C-; i" . counsel-imenu)
    ("C-; p" . counsel-git)))
 
