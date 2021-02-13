@@ -1,16 +1,45 @@
-* Org
-** Settings
-#+BEGIN_SRC emacs-lisp
-  (setq org-startup-indented t)
-  (setq org-refile-targets '((nil :maxlevel . 9)))
-  (setq org-refile-use-outline-path nil)
-  (setq org-outline-path-complete-in-steps nil)
-  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")
-                            (sequence "SUSPENSE(s)" "|" "CLEARED(l)" "FINISHED(f)")))
-  (defun g-org-refile-agenda-files (args)
-    (interactive "p")
-    (let* ((org-refile-use-outline-path 'file)
-           (org-refile-targets '((nil :maxlevel . 9)
-                                 (org-agenda-files :maxlevel . 9))))
-      (org-refile)))
-#+END_SRC
+* Better defaults
+** Frame
+#+begin_src emacs-lisp
+  (menu-bar-mode -1)                      ; don't show menu bar
+  (tool-bar-mode -1)                      ; don't show tool bar
+  (scroll-bar-mode -1)                    ; don't show scroll bar
+#+end_src
+** Buffer
+#+begin_src emacs-lisp
+  (setq-default indent-tabs-mode nil)     ; no tabs
+
+  (show-paren-mode 1)                     ; highlight matching parens
+  (toggle-indicate-empty-lines)           ; show trailing empty lines in fringe
+
+  (setq require-final-newline 1)          ; add newline when saving file
+  (save-place-mode 1)                     ; move point to where it was last time
+  (global-auto-revert-mode 1)             ; revert buffer when file changes
+  (add-hook 'before-save-hook             ; clean trailing whitespace when saving
+            'delete-trailing-whitespace)
+
+  (setq uniquify-buffer-name-style        ; add path when buffer names are repeated
+        'forward)
+  (setq backup-directory-alist            ; don't place backups files all over
+        `(("." . ,(concat user-emacs-directory "backups"))))
+#+end_src
+** Mode line
+#+begin_src emacs-lisp
+  (column-number-mode 1)                  ; show column number in the mode line
+#+end_src
+** Minibufferc
+#+begin_src emacs-lisp
+  (ido-mode 1)                            ; better file/buffer switching
+  (ido-everywhere 1)                      ; not sure where tho'
+  (setq ido-enable-flex-matching t)       ; match char sequence
+  (defalias 'yes-or-no-p 'y-or-n-p)       ; no need to type yes or no
+#+end_src
+** Startup
+#+begin_src emacs-lisp
+  (setq inhibit-startup-screen t)         ; don't show "welcome to emacs" screen
+#+end_src
+* Modes
+** Org
+#+begin_src emacs-lisp
+  (setq org-startup-indented t)           ; indent outlines
+#+end_src
